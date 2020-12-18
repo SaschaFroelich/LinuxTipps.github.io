@@ -14,10 +14,10 @@ $ dd if=/dev/(u)random of=/home/testfile count=2 bs=1024
 This will fill a file "testfile" in your home folder with 2KB ($count times $bs bytes) of random bytes and then stop. Of course open that file with a simple text editor will not do much good, because the bytes will be interpreted as ASCII (or Unicode, or UTF-8, or ...) and will therfore look like gibberish. This leads me to the next cool built-in command:
 
 ## 2 hexdump
-This command takes as input a file and outputs the file's contents in bytes. For example, when I run it on the testfile I just created with /dev/random, it returns:
+This command takes as input a file and outputs the file's contents in bytes. For example, when I run it on the testfile I just created with /dev/random, it returns: test
 
-00000000  45 3c e7 91 b4 bc f7 9c  77 51 ac f3 57 9d 4f 06  |E<......wQ..W.O.| \
-00000010  b3 61 ee 6b da b6 29 21  4a cc f0 3a 1b 62 9c f5  |.a.k..)!J..:.b..| \
+00000000  45 3c e7 91 b4 bc f7 9c  77 51 ac f3 57 9d 4f 06  |E<......wQ..W.O.| \<br/>
+00000010  b3 61 ee 6b da b6 29 21  4a cc f0 3a 1b 62 9c f5  |.a.k..)!J..:.b..| \  
 00000020  81 12 93 fa 9e 37 35 ca  0e fc bc 85 7f 61 3f d6  |.....75......a?.| \
 00000030  a3 c9 ec d4 75 02 e9 16  94 f4 68 f5 af 3a 0b 84  |....u.....h..:..| \
 00000040  e7 f2 4d 3e 39 4f 56 d0  c4 c6 c6 00 07 91 f3 dc  |..M>9OV.........| \
