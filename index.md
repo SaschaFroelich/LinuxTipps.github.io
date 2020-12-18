@@ -74,7 +74,7 @@ However, this command will usually spit out a bunch of lines containing director
 
     $ find / -name "filename" | grep -v "Permission denied"
 
-but this would not change anything, as | only pipes stdout, not error messages. So this command's output would look just like the previous one. Instead, when you pipe find's error messages to stdout, using | you can pass them along as the input of the grep-command, like so:
+but this would not change anything, as \| only pipes stdout, not error messages. So this command's output would look just like the previous one. Instead, when you pipe find's error messages to stdout, using \| you can pass them along as the input of the grep-command, like so:
 
     $ find / -name "filename" 2>&1 | grep -v "Permission denied"
 
